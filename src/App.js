@@ -15,10 +15,14 @@ const App = () => {
             "?",
             "?"
       ])
+      const [active, setActive] = useState(true)
 
       // Create a function to process clicks on the game board
       const processClick = (location) => {
             alert("Click detected on: " + location)
+            let tempBoard = [...board]
+            tempBoard[location] = "🌲"
+            setBoard(tempBoard)
       }
 
   return (
