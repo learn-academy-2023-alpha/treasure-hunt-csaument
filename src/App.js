@@ -47,9 +47,28 @@ const App = () => {
             }
       }
 
+      // Create a function to restart the game
+      const restartGame = () => {
+            setBoard([
+                  "?",
+                  "?",
+                  "?",
+                  "?",
+                  "?",
+                  "?",
+                  "?",
+                  "?",
+                  "?"
+            ])
+            setActive(true)
+      }
+
   return (
     <>
-      <h1>Treasure Hunt Game</h1>
+      <div className="header">
+            <h1>Treasure Hunt Game</h1>
+            <button onClick={restartGame}>Restart Game</button>
+      </div>
       <div className="gameboard">
             {board.map((value, index) => <Square show={value} key={index} index={index} processClick={processClick}/>)}
       </div>
