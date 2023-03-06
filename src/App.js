@@ -19,10 +19,32 @@ const App = () => {
 
       // Create a function to process clicks on the game board
       const processClick = (location) => {
-            alert("Click detected on: " + location)
-            let tempBoard = [...board]
-            tempBoard[location] = "🌲"
-            setBoard(tempBoard)
+            if(!active){
+                  alert("Sorry, the game is over")
+            }else if(board[location] === "?"){
+                  let guesses = board.filter(value => value === "?").length
+                  let randomNum = Math.floor(Math.random() * guesses)
+                  let newChar = "?"
+
+                  switch (randomNum) {
+                        case 0:
+                              newChar = "⭐️"
+                              setActive(false)
+                              alert("You win!")
+                              break
+                        case 1:
+                              newChar = "🏴‍☠️"
+                              setActive(false)
+                              alert("You lose!")
+                              break
+                        default:
+                              newChar = "🌲"
+                  }
+
+                  let tempBoard = [...board]
+                  tempBoard[location] = newChar
+                  setBoard(tempBoard)
+            }
       }
 
   return (
