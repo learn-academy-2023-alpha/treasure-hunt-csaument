@@ -16,6 +16,11 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
       - Pass value as a prop to each element of square
       - Modify App.css settings to center content within each square
 - As a user, when I click on one of the question marks an alert appears with the index position of that question mark in the array.
+      - Create a function under App.js to process clicks
+            - The function takes an index as an argument
+            - The function calls the alert and provides a message indicating the index
+      - Pass the function to the Square component via props
+      - Establish an onClick within the square's div that calls the function to process clicks
 - As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji.
 - As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
 - As a user, I can click on a “Play Again” button that will restart the game.
