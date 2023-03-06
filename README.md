@@ -25,6 +25,14 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
       - Within the function to process a click, set the value in the state based upon a click within that state
       - Use deconstructed and reconstructed array to copy values vice pointer
 - As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
+      - Create playing state to track whether the game is active
+      - Stop processing clicks when game is no longer active
+      - Determine win/loss conditions within main gameplay function
+      - Use conditional check to determine if the click is in an undescovered box
+      - Randomize win/loss check for new boxes
+      - Use switch/case to process wins, losses, and continued gameplay
+      - Display bomb emoji for losses, provide alert notification, and set active state to false
+      - Display treasure emoji for wins, provide alert notification, and set active state to false
 - As a user, I can click on a “Play Again” button that will restart the game.
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at five and decrements one every time I click on a square that is not the treasure nor the bomb.
 - As a user, I can see a message informing me that I won the game if I select the square that contains the treasure.
