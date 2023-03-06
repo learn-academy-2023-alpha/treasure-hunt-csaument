@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Square from "./components/Square"
 import "./App.css"
 
 const App = () => {
@@ -17,6 +18,9 @@ const App = () => {
   return (
     <>
       <h1>Treasure Hunt Game</h1>
+      <div className="gameboard">
+            {board.map((value, index) => <Square show={value} key={index}/>)}
+      </div>
     </>
   )
 }

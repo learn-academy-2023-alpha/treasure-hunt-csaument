@@ -2,8 +2,18 @@ h1 {
   text-align: center;
 }
 
+.gameboard {
+      display: flex;
+      flex-wrap: wrap;
+      width: 650px;
+      margin: 0 auto;
+}
+
 .square {
   height: 200px;
   width: 200px;
   border: 1px solid black;
+  text-align: center;
+  line-height: 200px;
+  font-size: 150px;
 }
