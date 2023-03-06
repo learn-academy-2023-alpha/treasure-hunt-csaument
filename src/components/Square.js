@@ -1,9 +1,11 @@
 import React from "react"
 
-const Square = () => {
+const Square = ({show}) => {
   return (
     <>
-      <div className="square"></div>
+      <div className="square">
+            {show}
+      </div>
     </>
   )
 }
