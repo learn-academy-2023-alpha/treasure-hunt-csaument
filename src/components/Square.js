@@ -1,9 +1,9 @@
 import React from "react"
 
-const Square = ({show}) => {
+const Square = ({show, index, processClick}) => {
   return (
     <>
-      <div className="square">
+      <div className="square" onClick={() => processClick(index)}>
             {show}
       </div>
     </>
