@@ -37,13 +37,13 @@ const App = () => {
                               alert("You win!")
                               break
                         case 1:
-                              newChar = "🏴‍☠️"
+                              newChar = "☄️"
                               setActive(false)
                               alert("You lose!")
                               break
                         default:
                               setTries(tries - 1)
-                              newChar = "🌲"
+                              newChar = "🔭"
                   }
 
                   let tempBoard = [...board]
@@ -72,7 +72,7 @@ const App = () => {
   return (
     <>
       <div className="header">
-            <h1>Treasure Hunt Game</h1>
+            <h1>Space Hunt Game</h1>
             <h2>You have {tries} tries remaining.</h2>
             <button onClick={restartGame}>Restart Game</button>
       </div>

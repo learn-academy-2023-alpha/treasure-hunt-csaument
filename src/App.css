@@ -1,3 +1,8 @@
+* {
+      background-color: rgb(8, 0, 35);
+      color:aqua;
+}
+
 h1 {
   text-align: center;
 }
@@ -22,4 +27,9 @@ h1 {
   text-align: center;
   line-height: 200px;
   font-size: 150px;
+}
+
+.square:hover {
+      transition: 1500ms ease;
+      background-color: rgb(221, 0, 255);
 }
