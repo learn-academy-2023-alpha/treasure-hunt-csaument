@@ -15,11 +15,15 @@ const App = () => {
             "?",
             "?"
       ])
+      // Create state to track game status
       const [active, setActive] = useState(true)
+
+      // Create state to track remaining guesses
+      const [tries, setTries] = useState(5)
 
       // Create a function to process clicks on the game board
       const processClick = (location) => {
-            if(!active){
+            if(!active || tries === 0){
                   alert("Sorry, the game is over")
             }else if(board[location] === "?"){
                   let guesses = board.filter(value => value === "?").length
@@ -38,6 +42,7 @@ const App = () => {
                               alert("You lose!")
                               break
                         default:
+                              setTries(tries - 1)
                               newChar = "🌲"
                   }
 
@@ -61,12 +66,14 @@ const App = () => {
                   "?"
             ])
             setActive(true)
+            setTries(5)
       }
 
   return (
     <>
       <div className="header">
             <h1>Treasure Hunt Game</h1>
+            <h2>You have {tries} tries remaining.</h2>
             <button onClick={restartGame}>Restart Game</button>
       </div>
       <div className="gameboard">
